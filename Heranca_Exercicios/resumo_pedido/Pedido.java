@@ -25,7 +25,7 @@ public class Pedido {
 //				+ "Tipo: Dvd  Titulo: Anjos da Noite 5 - Guerras de Sangue  Preco: 20,28  Quant: 1  Total: 20,28\r\n"
 //				+ "----------------------------\r\n" + "DESCONTO: 6,67\r\n" + "TOTAL PRODUTOS: 133,36\r\n"
 //				+ "----------------------------\r\n" + "TOTAL PEDIDO: 126,69\r\n" + "----------------------------";
-		String resumo = "------- RESUMO PEDIDO -------\r\n";
+		String resumo = "------- RESUMO PEDIDO -------\n";
 		double totalProdutos = 0;
 
 		for (ItemPedido itemPedido : itensPedido) {
@@ -43,14 +43,14 @@ public class Pedido {
 			totalProdutos += precoTotal;
 
 			resumo += "Tipo: " + tipoProduto + "  Titulo: " + titulo + "  Preco: " + precoFormat + "  Quant: "
-					+ quantidade + "  Total: " + precoTotalFormat + "\r\n";
+					+ quantidade + "  Total: " + precoTotalFormat + "\n";
 
 		}
 		double desconto = totalProdutos * (percentualDesconto / 100);
-		resumo += "----------------------------\r\n" + "DESCONTO: " + String.format("%.2f", desconto) + "\r\n";
-		resumo += "TOTAL PRODUTOS: " + String.format("%.2f", totalProdutos) + "\r\n";
-		resumo += "----------------------------\r\n" + "TOTAL PEDIDO: " + String.format("%.2f", calcularTotal())
-				+ "\r\n" + "----------------------------";
+		resumo += "----------------------------\n" + "DESCONTO: " + String.format("%.2f", desconto) + "\n";
+		resumo += "TOTAL PRODUTOS: " + String.format("%.2f", totalProdutos) + "\n";
+		resumo += "----------------------------\n" + "TOTAL PEDIDO: " + String.format("%.2f", calcularTotal())
+				+ "\n" + "----------------------------";
 
 		System.out.println(resumo);
 	}
