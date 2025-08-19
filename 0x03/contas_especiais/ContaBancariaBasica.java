@@ -42,13 +42,16 @@ public abstract class ContaBancariaBasica {
         if (this.saldo <= 0) {
             return 0;
         } else {
-            return this.saldo * (this.taxaJurosAnual / 1200);
+            double taxaMensal = taxaJurosAnual / 12.0 / 100.0;
+            //return this.saldo * (this.taxaJurosAnual / 1200);
+            return this.saldo * taxaMensal;
         }
     }
 
     void aplicarAtualizacaoMensal() {
-        this.saldo += this.calcularJurosMensal();
-        this.saldo -= this.calcularTarifaMensal();
+        double juros = this.calcularJurosMensal();
+        double tarifa = this.calcularTarifaMensal();
+        this.saldo = this.saldo - tarifa + juros;
     }
 
     public String getNumeracao() {

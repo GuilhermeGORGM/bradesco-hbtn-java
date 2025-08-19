@@ -43,8 +43,9 @@ public class ContaBancariaBasica {
     }
 
     void aplicarAtualizacaoMensal() {
-        this.saldo += this.calcularJurosMensal();
-        this.saldo -= this.calcularTarifaMensal();
+        double juros = this.calcularJurosMensal();
+        double tarifa = this.calcularTarifaMensal();
+        this.saldo = this.saldo - tarifa + juros;
     }
 
     public String getNumeracao() {
