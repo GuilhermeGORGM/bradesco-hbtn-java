@@ -2,10 +2,6 @@
 public class Post implements Comparable<Post> {
     @Override
     public int compareTo(Post o) {
-        int autorComp = this.autor.compareTo(o.autor);
-        if (autorComp != 0) {
-            return autorComp;
-        }
         int tituloComp = this.titulo.compareToIgnoreCase(o.titulo);
         if (tituloComp != 0) {
             return tituloComp;
