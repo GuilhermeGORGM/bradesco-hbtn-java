@@ -1,0 +1,14 @@
+
+public class Funcionario {
+	private double salario;
+
+	public Funcionario(double salario) {
+		super();
+		this.salario = salario;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+}
