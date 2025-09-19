@@ -13,6 +13,7 @@ public class Produto {
 		this.preco = preco;
 	}
 
+	@Override
 	public String toString() {
 		return "[" + codigo + "] " + nome + " " + categoria + " R$ " + String.format("%.2f", preco);
 	}
