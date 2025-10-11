@@ -8,7 +8,8 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "[" + codigo + "] " + nome + " " + cargo + " " + idade + " R$ " + String.format("%.6f", salario);
+		return "[" + codigo + "] " + nome + " " + cargo + " " + idade + " R$ "
+				+ String.format("%.6f", salario).replace('.', ',');
 	}
 
 	public String getCargo() {
