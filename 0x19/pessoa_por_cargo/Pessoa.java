@@ -6,6 +6,7 @@ public class Pessoa {
 	private int idade;
 	private double salario;
 
+	@Override
 	public String toString() {
 		return "[" + codigo + "] " + nome + " " + cargo + " " + idade + " R$ " + String.format("%,6f", salario);
 	}
